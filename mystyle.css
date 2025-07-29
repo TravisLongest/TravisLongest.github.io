@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(image/godzilla.png), center;
+    background-size: cover;
+    height: 109vh;
+}
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 300px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: goldenrod;
+    font-size: 35px;
+    font-family: Centaur;
+    float: left;
+    padding-top: 10px;
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 18px
+}
+
+ul li a{
+    text-decoration: none;
+    color: gold;
+    font-family: Centaur;
+    font-weight: bold;
+    transition: 0.4s ;
+}
+
+ul li a:hover{
+    color: goldenrod;
+}
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    font-family: Centaur;
+    color: forestgreen;
+    position: relative;
+}
+
+.email{
+    position: relative;
+    float: right;
+    font-family: Centaur;
+    color: forestgreen;
+}

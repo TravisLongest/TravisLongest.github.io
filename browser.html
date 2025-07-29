@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Page</title>
+    <link rel = "stylesheet" href = "mystyle.css">
+</head>
+<body>
+    <div class = "main">
+        <div class = "navbar">
+            <div class = "icon">
+                <h2 class = "logo">Browser Page</h2>
+            </div>
+
+            <div class ="menu">
+                <ul>
+                    <li><a href = "index.html">Home</a></li>
+                    <li><a href = "course.html">Course</a></li>
+                    <li><a href = "browser.html">Browser</a></li>
+                    <li><a href = "configuration.html">Configuration</a></li>
+                    <li><a href = "about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class = "bwr_chk">
+            <h2>JavaScript Window</h2>
+
+            <p id="demo"></p>
+
+            <script>
+                document.getElementById("demo").innerHTML =
+                "Browser inner window width: " + window.innerWidth + "px<br>" +
+                "Browser inner window height: " + window.innerHeight + "px";
+            </script>
+        </div>
+    </div>
+</body>
+</html>
