@@ -29,8 +29,38 @@
 
             <script>
                 document.getElementById("demo").innerHTML =
+                "navigator.appName is " + navigator.appName;
+                document.getElementById("demo").innerHTML =
+                "navigator.product is " + navigator.product;
+                document.getElementById("demo").innerHTML = navigator.appVersion;
+                document.getElementById("demo").innerHTML = navigator.userAgent;
+                document.getElementById("demo").innerHTML = navigator.platform;
+                
+                document.getElementById("demo").innerHTML =
                 "Browser inner window width: " + window.innerWidth + "px<br>" +
                 "Browser inner window height: " + window.innerHeight + "px";
+
+                document.getElementById("demo").innerHTML =
+                "Screen Width: " + screen.width;
+                document.getElementById("demo").innerHTML =
+                "Screen Height: " + screen.height;
+                document.getElementById("demo").innerHTML =
+                "Available Screen Width: " + screen.availWidth;
+                document.getElementById("demo").innerHTML =
+                "Available Screen Height: " + screen.availHeight;
+                document.getElementById("demo").innerHTML =
+                "Screen Color Depth: " + screen.colorDepth;
+                document.getElementById("demo").innerHTML =
+                "Screen Pixel Depth: " + screen.pixelDepth;
+
+                document.getElementById("demo").innerHTML =
+                "Page location is " + window.location.href;
+                document.getElementById("demo").innerHTML =
+                "Page hostname is " + window.location.hostname;
+                document.getElementById("demo").innerHTML =
+                "Page path is " + window.location.pathname;
+                document.getElementById("demo").innerHTML =
+                "Page protocol is " + window.location.protocol;
             </script>
         </div>
     </div>
