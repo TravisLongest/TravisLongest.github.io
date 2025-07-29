@@ -23,14 +23,53 @@
             </div>
         </div>
 
-        <div class = "pswd_chk">
-            <h1>Password Check</h1>
-            <p class = "par">Enter a password that is at least 10 characters long and<br>contains at least one letter, number, and special character:</p>
-            <form action = "/action_page.php">
-                <label for = "pswd">Password</label>
-            </form>
+         <div class="container">
+        <h2>Password Validation</h2>
+        <form id="passwordForm">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" 
+                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" 
+                   required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="validationMessage" class="message"></div>
+    </div>
 
-        </div>
+    <script>
+        document.getElementById('passwordForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const passwordInput = document.getElementById('password');
+            const password = passwordInput.value;
+            const validationMessage = document.getElementById('validationMessage');
+
+            // JavaScript validation logic
+            const hasLowercase = /[a-z]/.test(password);
+            const hasUppercase = /[A-Z]/.test(password);
+            const hasNumber = /\d/.test(password);
+            const isLongEnough = password.length >= 8;
+
+            if (hasLowercase && hasUppercase && hasNumber && isLongEnough) {
+                validationMessage.textContent = 'Password is valid!';
+                validationMessage.classList.remove('invalid');
+                validationMessage.classList.add('valid');
+            } else {
+                let message = 'Password must contain: ';
+                if (!hasLowercase) message += 'a lowercase letter, ';
+                if (!hasUppercase) message += 'an uppercase letter, ';
+                if (!hasNumber) message += 'a number, ';
+                if (!isLongEnough) message += 'at least 8 characters, ';
+                
+                // Remove trailing comma and space if present
+                message = message.replace(/, $/, ''); 
+
+                validationMessage.textContent = message;
+                validationMessage.classList.remove('valid');
+                validationMessage.classList.add('invalid');
+            }
+        });
+    </script>
     </div>
 </body>
 </html>
