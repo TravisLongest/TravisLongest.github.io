@@ -55,10 +55,8 @@
                 validationMessage.classList.remove('invalid');
                 validationMessage.classList.add('valid');
             }
-
-                validationMessage.textContent = message;
-                validationMessage.classList.remove('valid');
-                validationMessage.classList.add('invalid');
+                password.getElementById("valid").style.color = "green";
+                password.getElementById("invalid").style.color = "red";
             }
         });
     </script>
